@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HELIX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #1e1e1e;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-container input, .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #2b2b2b;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .contact-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .contact-container button:hover {
+            background: #0056b3;
+        }
+
+        .instagram-btn {
+            width: 100%;
+            padding: 10px;
+            background: #E1306C;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .instagram-btn:hover {
+            background: #C13584;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">HELIX</div>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <button class="instagram-btn" onclick="openInstagram()">Follow on Instagram</button>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let subject = document.getElementById('subject').value;
+            let message = document.getElementById('message').value;
+
+            console.log("Contact Form Submitted:");
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Subject:", subject);
+            console.log("Message:", message);
+
+            alert("Your message has been sent!");
+        });
+
+        function openInstagram() {
+            window.open("https://www.instagram.com/mr_helixx?igsh=MWJmODY1c2sweHBjMg==", "_blank");
+        }
+    </script>
+
+</body>
+</html>
