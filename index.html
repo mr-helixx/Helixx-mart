@@ -95,34 +95,17 @@
 
     <div class="contact-container">
         <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <input type="text" id="subject" placeholder="Subject" required>
-            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <form action="send_email.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
         <button class="instagram-btn" onclick="openInstagram()">Follow on Instagram</button>
     </div>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let subject = document.getElementById('subject').value;
-            let message = document.getElementById('message').value;
-
-            console.log("Contact Form Submitted:");
-            console.log("Name:", name);
-            console.log("Email:", email);
-            console.log("Subject:", subject);
-            console.log("Message:", message);
-
-            alert("Your message has been sent!");
-        });
-
         function openInstagram() {
             window.open("https://www.instagram.com/mr_helixx?igsh=MWJmODY1c2sweHBjMg==", "_blank");
         }
